@@ -110,8 +110,8 @@ public class XMLMapperBuilder extends BaseBuilder {
         throw new BuilderException("Mapper's namespace cannot be empty");
       }
       builderAssistant.setCurrentNamespace(namespace);
-      cacheRefElement(context.evalNode("cache-ref"));
       cacheElement(context.evalNode("cache"));
+      cacheRefElement(context.evalNode("cache-ref"));
       parameterMapElement(context.evalNodes("/mapper/parameterMap"));
       resultMapElements(context.evalNodes("/mapper/resultMap"));
       sqlElement(context.evalNodes("/mapper/sql"));
